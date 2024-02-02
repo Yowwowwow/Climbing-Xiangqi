@@ -3,24 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Climbing Xiangqi</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>Climbing Xiangqi</title>
+    <link rel="shortcut icon" href="TemplateData/CX icon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
+  <style>
+    body {
+      overflow: hidden; /* Hide scrollbars */
+    }
+    </style>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+    <div id="unity-container" style="width: 100%; height: 100%">
+      <canvas id="unity-canvas" width=auto height=auto></canvas>
       <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
+        <img src="TemplateData/CX icon.png" alt="pieces" class="center" width="100" height="100">
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Climbing Xiangqi</div>
       </div>
     </div>
     <script>
@@ -80,10 +79,10 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        //unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
       }
       loadingBar.style.display = "block";
 
@@ -94,11 +93,11 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
+          //fullscreenButton.onclick = () => {
+          //  unityInstance.SetFullscreen(1);
+          //};
         }).catch((message) => {
-          alert(message);
+          //alert(message);
         });
       };
       document.body.appendChild(script);
