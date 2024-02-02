@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Climbing Xiangqi</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #5A5A5A"></canvas>
+    <script src="Build/Climbing Xiangqi.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Climbing Xiangqi.data",
+        frameworkUrl: "Build/Climbing Xiangqi.framework.js",
+        codeUrl: "Build/Climbing Xiangqi.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "lì tŕ",
+        productName: "Climbing Xiangqi",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
