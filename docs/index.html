@@ -12,12 +12,16 @@
     body {
       overflow: hidden; /* Hide scrollbars */
     }
+    .center100{
+    margin: auto;
+    width: 100px;
+  }
     </style>
   <body>
     <div id="unity-container" style="width: 100%; height: 100%">
       <canvas id="unity-canvas" width=auto height=auto></canvas>
       <div id="unity-loading-bar">
-        <img src="TemplateData/CX icon.png" alt="pieces" class="center" width="100" height="100">
+        <div class="center100"><img src="TemplateData/CX icon.png" alt="pieces" width="100" height="100"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
